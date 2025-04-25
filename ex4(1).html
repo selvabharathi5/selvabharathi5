@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sum Calculator</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 50%;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+        <h1> Sum Calculator</h1>
+        <input type="text" id="arrayInput" placeholder="Enter numbers">
+        <br>
+        <br>
+        <button onclick="calculateSum()"> Sum</button>
+        <div id="result" class="result"></div>
+    <script>
+        function calculateSum() {
+            const input = document.getElementById('arrayInput').value;
+            const resultDiv = document.getElementById('result');
+            const numbers = input.split(',').map(num => parseFloat(num.trim())).filter(num => !isNaN(num));
+            
+            if (numbers.length === 0) {
+                resultDiv.textContent = 'Please enter valid numbers.';
+                return;
+            }
+            
+            const sum = numbers.reduce((acc, num) => acc + num, 0);
+            resultDiv.textContent = `Sum: ${sum}`;
+        }
+    </script>
+</body>
+</html>

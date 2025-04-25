@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Input Field</title>
+    <script>
+        function checkField() {
+            // Get the value of the input field with id "assignment1"
+            const inputField = document.getElementById('assignment1').value;
+
+            // Check if the input field is blank
+            if (inputField.trim() === '') {
+                alert("The field is blank. Please enter some data.");
+            } else {
+                alert("The field has data.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Field Check</h1>
+    <label for="assignment1">Assignment 1:</label>
+    <input type="text" id="assignment1" placeholder="Enter data here">
+    <button onclick="checkField()">Check Field</button>
+</body>
+</html>

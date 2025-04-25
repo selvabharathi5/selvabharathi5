@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>hello user!</title>
+</head>
+<body>
+    <h1>add number:</h1>
+<input type="number" id="numberInput" placeholder="enter number:">
+<button onclick="add()">add</button>
+<br>
+<p id="numberlist"></p>
+<p id="sum"></p>
+<script>
+let numbers=[];
+function add(){
+let number document.getElementById("numberInput");
+let number = parsefloat(numberInput.value);
+if(isNaN(number)){
+alart("enter you value");
+numberInput = "";
+return;
+}
+numbers.push(number);
+numberInput.value = "";
+let numberlist = document.getElementById("numberlist");
+numberlist.textcontent = Enter: ${ numbers.join(",") };
+let sum numbers.reduce((total,num)=>total+num,0);
+let sumElement = document.getElement("sum");
+sumElement.textContent = 'sum:${sum};
+</script>
+</body>

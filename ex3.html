@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>hello user!</title>
+<style></style>
+</head>
+<body>
+  <h1>Hello! what's your name?</h1>
+<input type="text" id="userName" placeholder="Enter your Name:">
+<br>
+<br>
+<button onclick="greetuser()">greet me</button>
+<p id="greeting"></p>
+<script>
+function greetuser()
+{
+var userName=document.getElementById("userName").value;
+var message="invalid";
+var greetingmessage = "Hello "+ userName ;
+if(userName ==""){
+document.getElementById('greeting').textContent=message;
+document.alart("enter your name");
+}
+else{
+document.getElementById('greeting').textContent=greetingmessage;
+document.write(greetingmessage);}
+}</script>
+</body>
+</html>

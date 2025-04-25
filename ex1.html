@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<mete name = "view point" content = "width = device-width,intial-sclae=1.0">
+<style>
+a
+{
+padding:10px;
+}
+body 
+{
+font-family:arial,san-serif;
+margin:0;
+padding:20px;
+background-color:rgb(0,0,0);
+color:white;
+}
+h1
+{
+text-align:center;
+}
+table
+{
+border-collapse:collapse;
+width:100%;
+}
+th,th
+{
+border:1px solid #ddd;
+padding:8px;
+}
+th
+{
+text-align:left;
+}
+.form-container
+{
+border:1px solid #ddd;
+padding:20px;
+margin-top:20px;
+}
+.form-lable
+{
+display:block;
+margin-bottom:5px;
+}
+</style>
+<title>my website</title>
+</head>
+<body>
+ <h1>MY WEBSITE</h1>
+ <nav>
+  <a href="#about">about </a>
+  <a href="#product">product</a>
+  <a href="#contact">contact</a>
+ </nav>
+<main>
+ <section id="about">
+<hr>
+  <h2>about</h2>
+<hr>
+  <p>About will be information can be written here.</p>
+ </section>
+ <section id="product">
+<hr>
+  <h2>Product</h2>
+  <table border=1>
+  <thead>
+     <th>S NO.</th>
+     <th>PRODUCT</th>
+     <th>PRICE</th>
+  </thead>
+  <tbody>
+   <tr>
+     <td>1</td>
+     <td>apple</td>
+     <td>$5</td>
+   </tr>
+   <tr>
+     <td>2</td>
+     <td>orange</td>
+     <td>$5</td>
+   </tr>
+   <tr>
+   <td>3</td>
+   <td>banana</td>
+   <td>$2</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="contact">
+<hr>
+<h2>contact</h2>
+  <div class="form-container">
+     <form action="submit-form" method="post">
+     <label for="name" class="form-lable">Name:</label>
+     <input type="text" id="name" name="name" required>
+     <label for="email" class="form-lable">Mail:</label>
+     <input type="email" id="email" name="email" required>
+     <label for="message" class="form-lable">Message:</label>
+     <textarea id="message" name="message" row="5" required>
+     </textarea>
+     <br>
+     <button type="submit">submit<button>
+     </form>
+</div>
+</section>
+
+</main>
+</body>
+</html>

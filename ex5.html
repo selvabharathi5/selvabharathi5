@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd Number Display</title>
+    <script>
+        function displayOddNumbers() {
+            // Get the user's input
+            const upperLimit = parseInt(document.getElementById('numberInput').value);
+
+            // Check if the input is a valid number
+            if (isNaN(upperLimit) || upperLimit <= 0) {
+                alert("Please enter a valid positive integer.");
+                return;
+            }
+
+            // Get the element where we will display the results
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear any previous results
+
+            // Iterate from 1 to the upper limit
+            for (let num = 1; num <= upperLimit; num++) {
+                // Check if the number is odd
+                if (num % 2 !== 0) {
+                    // Create a new paragraph element and add it to the resultDiv
+                    const p = document.createElement('p');
+                    p.textContent = num;
+                    resultDiv.appendChild(p);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Display Odd Numbers</h1>
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput" min="1">
+    <button onclick="displayOddNumbers()">Submit</button>
+    <div id="result"></div>
+</body>
+</html>
